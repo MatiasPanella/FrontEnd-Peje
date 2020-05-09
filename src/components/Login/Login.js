@@ -11,7 +11,7 @@ const Login = () =>{
         const token = await login(user,password);
         if(token){
             localStorage.setItem('token', token.token);
-                history.push('/home');
+                history.push('/');
         }
     }
 
