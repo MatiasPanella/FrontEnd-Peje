@@ -1,10 +1,19 @@
-import React, {Fragment} from 'react';
-import Login from './components/Login/Login'
+import React, { Suspense, Fragment } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Login from './components/Login/Login';
+import Home from './components/Home/Home';
 
-const App = () =>{
+const App = () => {
+
+
+
   return (
     <Fragment>
-      <Login />
+      <Router>
+        {/* menu */}
+        <Route path="/login" exact component={Login} />
+        <Route exact path="/home" component={Home} />
+      </Router>
     </Fragment>
   )
 }
